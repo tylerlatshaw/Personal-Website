@@ -321,3 +321,321 @@ body {
   background-image: url('/images/header.png');
   background-image: radial-gradient(75% 75% at 50% 50%, #073AFF00 0%, #000000FF 80%), radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%), radial-gradient(50% 50% at 7% 98%, #B53AFFF5 21%, #073AFF00 100%), radial-gradient(45% 45% at 35% 87%, #FFA65AFF 5%, #073AFF00 100%), radial-gradient(21% 37% at 72% 23%, #06E47794 24%, #073AFF00 100%), radial-gradient(35% 56% at 91% 74%, #4474FEF5 9%, #073AFF00 100%), radial-gradient(74% 86% at 67% 38%, #00AA4DF5 24%, #073AFF00 100%), linear-gradient(120deg, #029CFFFF 0%, #004CFCFF 100%);
 }
+
+@media (min-width: var(--screen-md)) {
+  nav {
+      background-color: rgba(3, 7, 18, .5);
+  }
+}
+
+h1 {
+  /* w-full */
+  width: 100%;
+
+  /* mb-8 */
+  margin-bottom: 2rem;
+
+  /* font-bold */
+  font-weight: bold;
+
+  /* text-center */
+  text-align: center;
+}
+
+h2 {
+  /* mx-auto */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* mt-12 */
+  margin-top: 3rem;
+
+  /* mb-8 */
+  margin-bottom: 2rem;
+
+  /* pb-1 */
+  padding-bottom: 0.25rem;
+
+  /* px-4 */
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  /* w-full */
+  width: fit-content;
+
+  /* font-semibold */
+  font-weight: 600;
+
+  /* text-center */
+  text-align: center;
+
+  /* underline */
+  text-decoration-line: underline;
+
+  /* decoration-yellow-500 */
+  text-decoration-color: var(--sky-400);
+}
+
+/* screen width < md */
+@media (max-width: 768px) {
+  h1 {
+      /* text-4xl */
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+  }
+
+  h2 {
+      /* text-2xl */
+      font-size: 1.5rem;
+      line-height: 2rem;
+
+      /* underline-offset-4 */
+      text-underline-offset: 4px;
+
+      /* decoration-4 */
+      text-decoration-thickness: 4px;
+  }
+}
+
+/* screen width > md */
+@media (min-width: 768px) {
+  h1 {
+      /* text between 4xl - 5xl */
+      font-size: 2.625rem;
+      line-height: 2.625rem;
+  }
+
+  h2 {
+      /* text-3xl */
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+
+      /* underline-offset-4 */
+      text-underline-offset: 4px;
+
+      /* decoration-[6px] */
+      text-decoration-thickness: 5px;
+  }
+}
+
+.MuiAlert-outlinedInfo {
+  border: solid 2px var(--blue-500);
+  background-color: rgba(59, 130, 246, 0.3);
+  color: white;
+}
+
+.MuiAlert-filledInfo {
+  background-color: var(--blue-500);
+  color: white;
+}
+
+.MuiAlertTitle-root {
+  /* text-lg */
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.MuiAlert-message {
+  /* text-base */
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.MuiAlert-icon {
+  color: white !important;
+  font-size: 1.5rem;
+}
+
+
+/*******************************/
+/*****
+/*****    UTILITIES 
+/*****
+/*******************************/
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+div[data-lastpass-icon-root] {
+  display: none
+}
+
+.hide-radio {
+  visibility: hidden;
+}
+
+.multiline {
+  white-space: pre-line;
+}
+
+/* screen width < md */
+@media (max-width: 768px) {
+  .desktop-only {
+      display: none;
+  }
+}
+
+/* screen width > md */
+@media (min-width: 768px) {
+  .mobile-only {
+      display: none;
+  }
+}
+
+
+/*******************************/
+/*****
+/*****    SITEWIDE STYLES 
+/*****
+/*******************************/
+
+.logo-full-name {
+  padding: 4px;
+}
+
+.logo-first-name {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.mobile-menu li {
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer-textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+.footer-contact-form input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 28px var(--slate-800) inset !important;
+  -webkit-text-fill-color: white;
+}
+
+.footer-contact-form input:-webkit-autofill:disabled {
+  -webkit-box-shadow: 0 0 0 28px var(--gray-800) inset !important;
+}
+
+.footer-contact-form .button {
+  text-transform: none;
+  font-weight: 400;
+  width: 106px;
+}
+
+.footer-contact-form .button:disabled {
+  background-color: var(--green-900);
+}
+
+.positive-response {
+  color: var(--green-600);
+}
+
+.negative-response {
+  color: var(--red-600);
+}
+
+.neutral-response {
+  color: var(--gray-500);
+}
+
+.bg-positive-response {
+  background-color: var(--green-600);
+}
+
+.bg-negative-response {
+  background-color: var(--red-600);
+}
+
+.bg-neutral-response {
+  background-color: var(--gray-500);
+}
+
+
+/*******************************/
+/*****
+/*****    HOMEPAGE 
+/*****
+/*******************************/
+
+.homepage-subtext {
+  text-shadow: 1px 1px 3px black;
+}
+
+.homepage-main-image-blue {
+  box-shadow: 5px 5px 18px -2px #329fcc;
+}
+
+.homepage-main-image-red {
+  box-shadow: 5px 5px 18px -2px #ff4b4bcc;
+}
+
+.homepage-main-image-green {
+  box-shadow: 5px 5px 18px -2px #68824B;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.certification-ribbon::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.certification-ribbon {
+  /* IE and Edge */
+  -ms-overflow-style: none;
+
+  /* Firefox */
+  scrollbar-width: none;
+}
+
+.side-shadow {
+  background-image: linear-gradient(to right, white, white),
+      linear-gradient(to right, white, white),
+      linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)),
+      linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+  background-position: left center, right center, left center, right center;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+.certification-image {
+  width: 100px;
+  display: flex;
+  padding: 8px;
+}
+
+.page-card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.page-card-picture {
+  background-image: url(/images/cover-image-placeholder.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.record-card {
+  object-fit: "cover";
+}
+
+
+/*******************************/
+/*****
+/*****    PRIVACY POLICY 
+/*****
+/*******************************/
+
+.privacy-policy .privacy-policy-main a {
+  text-decoration: underline;
+}
+
+.privacy-policy .privacy-policy-main a:hover {
+  color: var(--sky-800);
+}
