@@ -1,4 +1,4 @@
-import { portfolioOptions, portfolioOptionType } from "@/app/lib/portfolio-data";
+import { portfolioOptions, portfolioOptionType } from "../../app/lib/portfolio-data";
 import { companyData } from "@/app/lib/resume-data";
 import Image from "next/image";
 import Link from "next/link";

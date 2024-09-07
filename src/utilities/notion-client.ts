@@ -1,8 +1,9 @@
 import "server-only";
 
 import { Client } from "@notionhq/client";
-import { ContactDataType } from "@/app/lib/type-library";
 import { getCurrentDate, getCurrentDateTime } from "./date-utilities";
+
+import type { ContactDataType } from "../app/lib/type-library";
 
 export const notionClient = new Client({
     auth: process.env.NOTION_SECRET

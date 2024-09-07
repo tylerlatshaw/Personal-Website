@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Metadata } from "next";
-import VinylRecordContainer from "@/components/interests/vinyl-record-container";
-import VinylRecordLoading from "@/components/interests/vinyl-record-loading";
+import VinylRecordContainer from "../../../components/interests/vinyl-record-container";
+import VinylRecordLoading from "../../../components/interests/vinyl-record-loading";
 
 export const metadata: Metadata = {
     title: "My Interests",

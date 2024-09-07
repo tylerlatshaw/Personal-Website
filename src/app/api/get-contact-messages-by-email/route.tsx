@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
-import { getContactMessagesByEmail } from "@/utilities/notion-client";
-import { ContactResponseType, ContactResultType } from "@/app/lib/notion-type-library";
+import { getContactMessagesByEmail } from "../../../utilities/notion-client";
+
+import type { ContactResponseType, ContactResultType } from "../../lib/notion-type-library";
 
 export async function POST(request: Request) {
 

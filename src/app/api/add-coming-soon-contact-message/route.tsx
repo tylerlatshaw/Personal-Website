@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import MessageReceived from "@/components/emails/new-message-received";
-import ComingSoonOnList from "@/components/emails/coming-soon-on-the-list";
-import { getCurrentDate, getCurrentDateTime } from "@/utilities/date-utilities";
+import MessageReceived from "../../../components/emails/new-message-received";
+import ComingSoonOnList from "../../../components/emails/coming-soon-on-the-list";
+import { getCurrentDate, getCurrentDateTime } from "../../../utilities/date-utilities";
+import { addContactMessage, getContactMessagesByEmail } from "../../../utilities/notion-client";
 
-import type { ContactDataType } from "@/app/lib/type-library";
-import { addContactMessage, getContactMessagesByEmail } from "@/utilities/notion-client";
+import type { ContactDataType } from "../../lib/type-library";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromAddress = process.env.RESEND_FROM;
