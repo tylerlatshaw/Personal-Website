@@ -11,15 +11,21 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@mui/icons-material": "^5.16.7",
-    "@mui/material": "^5.16.7",
+    "@mui/icons-material": "5.15.3",
+    "@mui/lab": "^5.0.0-alpha.151",
+    "@mui/material": "^5.14.9",
     "@notionhq/client": "^2.2.15",
+    "@react-email/components": "^0.0.25",
     "axios": "^1.7.5",
     "hamburger-react": "^2.5.1",
+    "isomorphic-dompurify": "^2.15.0",
+    "marked": "^14.1.0",
     "next": "14.2.6",
     "react": "^18",
+    "react-card-flip": "^1.2.3",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",
+    "react-textarea-autosize": "^8.5.3",
     "resend": "^4.0.0"
   },
   "devDependencies": {

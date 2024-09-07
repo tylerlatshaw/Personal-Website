@@ -324,7 +324,7 @@ body {
 
 @media (min-width: var(--screen-md)) {
   nav {
-      background-color: rgba(3, 7, 18, .5);
+    background-color: rgba(3, 7, 18, .5);
   }
 }
 
@@ -379,42 +379,42 @@ h2 {
 /* screen width < md */
 @media (max-width: 768px) {
   h1 {
-      /* text-4xl */
-      font-size: 2.25rem;
-      line-height: 2.5rem;
+    /* text-4xl */
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   h2 {
-      /* text-2xl */
-      font-size: 1.5rem;
-      line-height: 2rem;
+    /* text-2xl */
+    font-size: 1.5rem;
+    line-height: 2rem;
 
-      /* underline-offset-4 */
-      text-underline-offset: 4px;
+    /* underline-offset-4 */
+    text-underline-offset: 4px;
 
-      /* decoration-4 */
-      text-decoration-thickness: 4px;
+    /* decoration-4 */
+    text-decoration-thickness: 4px;
   }
 }
 
 /* screen width > md */
 @media (min-width: 768px) {
   h1 {
-      /* text between 4xl - 5xl */
-      font-size: 2.625rem;
-      line-height: 2.625rem;
+    /* text between 4xl - 5xl */
+    font-size: 2.625rem;
+    line-height: 2.625rem;
   }
 
   h2 {
-      /* text-3xl */
-      font-size: 1.875rem;
-      line-height: 2.25rem;
+    /* text-3xl */
+    font-size: 1.875rem;
+    line-height: 2.25rem;
 
-      /* underline-offset-4 */
-      text-underline-offset: 4px;
+    /* underline-offset-4 */
+    text-underline-offset: 4px;
 
-      /* decoration-[6px] */
-      text-decoration-thickness: 5px;
+    /* decoration-[6px] */
+    text-decoration-thickness: 5px;
   }
 }
 
@@ -472,14 +472,14 @@ div[data-lastpass-icon-root] {
 /* screen width < md */
 @media (max-width: 768px) {
   .desktop-only {
-      display: none;
+    display: none;
   }
 }
 
 /* screen width > md */
 @media (min-width: 768px) {
   .mobile-only {
-      display: none;
+    display: none;
   }
 }
 
@@ -594,9 +594,9 @@ input:-webkit-autofill:active {
 
 .side-shadow {
   background-image: linear-gradient(to right, white, white),
-      linear-gradient(to right, white, white),
-      linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)),
-      linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+    linear-gradient(to right, white, white),
+    linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)),
+    linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
   background-position: left center, right center, left center, right center;
   background-repeat: no-repeat;
   background-color: white;
@@ -628,6 +628,36 @@ input:-webkit-autofill:active {
 
 /*******************************/
 /*****
+/*****    RESUME 
+/*****
+/*******************************/
+
+.react-card-flip {
+  height: 100%;
+}
+
+
+/*******************************/
+/*****
+/*****    CONTACT ME PAGE 
+/*****
+/*******************************/
+
+.contact-form input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 28px var(--gray-800) inset !important;
+  -webkit-text-fill-color: white;
+}
+
+.contact-form input:-webkit-autofill:disabled {
+  -webkit-box-shadow: 0 0 0 28px var(--gray-800) inset !important;
+}
+
+
+/*******************************/
+/*****
 /*****    PRIVACY POLICY 
 /*****
 /*******************************/
@@ -638,4 +668,79 @@ input:-webkit-autofill:active {
 
 .privacy-policy .privacy-policy-main a:hover {
   color: var(--sky-800);
+}
+
+
+/*******************************/
+/*****
+/*****    DEVELOPER 
+/*****
+/*******************************/
+
+.developer-accordion input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 28px var(--slate-800) inset !important;
+  -webkit-text-fill-color: white;
+}
+
+.cli-commands table {
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.cli-commands table::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+.cli-commands>div {
+  width: 100%;
+}
+
+.cli-commands h2:nth-child(1) {
+  margin-top: 0;
+}
+
+.cli-commands table {
+  width: 100%;
+  display: block;
+  overflow-x: scroll;
+}
+
+.cli-commands th {
+  border: solid 1px black;
+  padding: 4px 8px;
+  background-color: var(--slate-600);
+}
+
+.cli-commands td {
+  border: solid 1px black;
+  padding: 4px 8px;
+}
+
+.cli-commands code {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--red-300);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: solid 1px var(--slate-950);
+  background-color: var(--slate-900);
+  font-weight: 600;
+}
+
+.cli-commands p {
+  margin-top: 1rem;
+}
+
+.cli-commands a {
+  color: var(--sky-600);
+}
+
+.cli-commands a:hover {
+  color: var(--sky-700);
+  text-decoration: underline;
 }

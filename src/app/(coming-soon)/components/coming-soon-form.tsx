@@ -6,7 +6,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Button, CircularProgress } from "@mui/material/";
 import SendIcon from "@mui/icons-material/Send";
 
-import type { ComingSoonDataType } from "@/app/lib/type-library";
+import type { ContactDataType } from "@/app/lib/type-library";
 
 type SubmitState = "Idle" | "Success" | "Error";
 type FormInputs = {
@@ -31,15 +31,15 @@ export default function ComingSoonForm() {
         setLoadingState(true);
 
         try {
-            const { data } = await axios.post("/api/coming-soon-form", {
+            const { data } = await axios.post("/api/add-coming-soon-contact-message", {
                 name: "Notification Request",
                 email: formData.email,
                 message: "Notify me when the site goes live",
                 source: "Coming Soon",
                 referringPage: window.location.href,
-            } as ComingSoonDataType);
+            } as ContactDataType);
 
-            setResponseMessage(data.message);
+            setResponseMessage(data);
             setSubmitState("Success");
             reset({
                 email: "",

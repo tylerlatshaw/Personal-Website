@@ -1,6 +1,6 @@
 import Link from "next/link";
 import SvgIcon from "@mui/icons-material/Home";
-//import FormFooterContact from "./footer-contact";
+import FormFooterContact from "./footer-contact";
 import {
     footerSocialLinks,
     navigationLinks,
@@ -73,7 +73,7 @@ export default function Footer() {
                             <div className="w-full text-center">
                                 <span className="font-medium">Send Me a Message</span>
                             </div>
-                            {/* <FormFooterContact /> */}
+                            <FormFooterContact />
                         </div>
                     </div>
                     {copyright}
