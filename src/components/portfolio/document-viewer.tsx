@@ -1,8 +1,9 @@
-import { portfolioOptionType } from "@/app/lib/portfolio-data";
 import CreatedForSection from "./created-for-section";
-import { companyData } from "@/app/lib/resume-data";
+import { companyData } from "../../app/lib/resume-data";
 import { Button } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
+import type { portfolioOptionType } from "../../app/lib/portfolio-data";
 
 export default function DocumentViewer(portfolio: portfolioOptionType) {
 
