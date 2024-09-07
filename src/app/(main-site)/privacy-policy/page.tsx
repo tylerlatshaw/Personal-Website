@@ -1,5 +1,7 @@
 import PrivacyPolicy from "@/components/privacy-policy/privacy-policy";
+import PrivacyPolicyLoading from "@/components/privacy-policy/privacy-policy-loading";
 import { Metadata } from "next";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
     title: "Privacy Policy",
@@ -12,7 +14,9 @@ export default function Page() {
 
                 <h1>Privacy Policy</h1>
 
-                <PrivacyPolicy />
+                <Suspense fallback={<PrivacyPolicyLoading />}>
+                    <PrivacyPolicy />
+                </Suspense>
 
             </div>
         </div>

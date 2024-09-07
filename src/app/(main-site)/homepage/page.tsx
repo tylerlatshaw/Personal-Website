@@ -1,6 +1,7 @@
 import MainInfoSection from "@/components/homepage/main-info";
 import CertificationRibbon from "@/components/homepage/certification-ribbon";
 import QuickPages from "@/components/homepage/quick-pages";
+import { Suspense } from "react";
 
 export default function Page() {
   return <>
@@ -24,7 +25,9 @@ export default function Page() {
       <h2>Get to Know Me</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 mt-2 w-full text-center justify-items-center">
-        <QuickPages />
+        <Suspense fallback={<></>}>
+          <QuickPages />
+        </Suspense>
       </div>
     </div>
   </>;
