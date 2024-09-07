@@ -1,6 +1,6 @@
-import MainInfoSection from "@/components/homepage/main-info";
-import CertificationRibbon from "@/components/homepage/certification-ribbon";
-import QuickPages from "@/components/homepage/quick-pages";
+import MainInfoSection from "../../../components/homepage/main-info";
+import CertificationRibbon from "../../../components/homepage/certification-ribbon";
+import QuickPages from "../../../components/homepage/quick-pages";
 import { Suspense } from "react";
 
 export default function Page() {
