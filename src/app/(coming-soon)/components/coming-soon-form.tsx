@@ -6,7 +6,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Button, CircularProgress } from "@mui/material/";
 import SendIcon from "@mui/icons-material/Send";
 
-import type { ContactDataType } from "@/app/lib/type-library";
+import type { ContactDataType } from "../../../app/lib/type-library";
 
 type SubmitState = "Idle" | "Success" | "Error";
 type FormInputs = {

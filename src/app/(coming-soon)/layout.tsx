@@ -1,5 +1,5 @@
 import "./../globals.css";
-import "@/app/(coming-soon)/components/coming-soon.css";
+import "../(coming-soon)/components/coming-soon.css";
 
 export default function RootLayout({
     children,
