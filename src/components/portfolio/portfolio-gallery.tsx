@@ -1,5 +1,5 @@
-import { portfolioOptions, portfolioOptionType } from "@/app/lib/portfolio-data";
-import { companyData } from "@/app/lib/resume-data";
+import { portfolioOptions, portfolioOptionType } from "../../app/lib/portfolio-data";
+import { companyData } from "../../app/lib/resume-data";
 import Image from "next/image";
 import Link from "next/link";
 import CreatedForSection from "./created-for-section";

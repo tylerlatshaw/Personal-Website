@@ -1,4 +1,4 @@
-import { skills } from "@/app/lib/resume-data";
+import { skills } from "../../app/lib/resume-data";
 import { Chip } from "@mui/material";
 
 export default function SkillList() {

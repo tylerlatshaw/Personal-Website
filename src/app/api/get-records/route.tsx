@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
-import { getRecords } from "@/utilities/notion-client";
-import { RecordResponseType, RecordResultType } from "@/app/lib/notion-type-library";
+import { getRecords } from "../../../utilities/notion-client";
+
+import type { RecordResponseType, RecordResultType } from "../../lib/notion-type-library";
 
 export async function GET() {
     var start_cursor;

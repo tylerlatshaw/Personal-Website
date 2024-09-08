@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { certificationRibbon, certificationRibbonType } from "@/app/lib/certification-data";
+import { certificationRibbon, certificationRibbonType } from "../../app/lib/certification-data";
 import { Card } from "@mui/material";
 
 export default function CertificationsList() {

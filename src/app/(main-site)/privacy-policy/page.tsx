@@ -1,7 +1,7 @@
-import PrivacyPolicy from "@/components/privacy-policy/privacy-policy";
-import PrivacyPolicyLoading from "@/components/privacy-policy/privacy-policy-loading";
 import { Metadata } from "next";
 import { Suspense } from "react";
+import PrivacyPolicy from "../../../components/privacy-policy/privacy-policy";
+import PrivacyPolicyLoading from "../../../components/privacy-policy/privacy-policy-loading";
 
 export const metadata: Metadata = {
     title: "Privacy Policy",

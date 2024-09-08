@@ -1,6 +1,6 @@
-import { portfolioOptions } from "@/app/lib/portfolio-data";
-import DocumentViewer from "@/components/portfolio/document-viewer";
-import NotFound from "@/components/portfolio/not-found";
+import { portfolioOptions } from "../../../lib/portfolio-data";
+import DocumentViewer from "../../../../components/portfolio/document-viewer";
+import NotFound from "../../../../components/portfolio/not-found";
 
 export default function Page({ params }: { params: { portfolioSlug: string } }) {
 

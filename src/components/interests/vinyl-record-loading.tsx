@@ -1,8 +1,10 @@
 export default function VinylRecordLoading() {
 
-    const container = [...Array(12)].map(() => {
-        return <>
-            <div>
+    const placeholder = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+    return <>
+        {placeholder.map((index) => {
+            return <div key={index}>
                 <div className="flex items-stretch bg-gray-900 shadow-lg drop-shadow-lg rounded p-3 flex flex-1 flex-col justify-between w-100">
                     <div className="animate-pulse aspect-square w-full rounded bg-gray-500"></div>
                 </div>
@@ -12,13 +14,8 @@ export default function VinylRecordLoading() {
                         <div className="animate-pulse bg-gray-500 w-[40%] mx-auto h-3 rounded"></div>
                     </div>
                 </div>
-            </div>
-        </>;
-    });
-
-
-    return <>
-        {container}
+            </div>;
+        })}
     </>;
 
 }

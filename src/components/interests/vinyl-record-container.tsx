@@ -15,8 +15,8 @@ export default function VinylRecordContainer() {
 
         return <>
             {
-                data.map((record) => {
-                    return <div key={record.id}>
+                data.map((record, index) => {
+                    return <div key={index}>
                         <div className="flex items-stretch bg-gray-900 shadow-lg drop-shadow-lg rounded p-3 flex flex-1 flex-col justify-between w-100">
                             <img src={record.properties.ImageUrl.files[0].file.url} alt={record.properties.Name.rich_text[0].plain_text} className="aspect-square w-full rounded" />
                         </div>
