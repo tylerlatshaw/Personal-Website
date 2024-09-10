@@ -677,7 +677,7 @@ input:-webkit-autofill:active {
 /*****
 /*******************************/
 
-.developer-accordion input:-webkit-autofill,
+.developer-module input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
@@ -685,44 +685,49 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: white;
 }
 
-.cli-commands table {
+.developer-module table {
   -ms-overflow-style: none;
   /* Internet Explorer 10+ */
   scrollbar-width: none;
   /* Firefox */
 }
 
-.cli-commands table::-webkit-scrollbar {
+.developer-module table::-webkit-scrollbar {
   display: none;
   /* Safari and Chrome */
 }
 
-.cli-commands>div {
+.developer-module>div {
   width: 100%;
 }
 
-.cli-commands h2:nth-child(1) {
+.developer-module h2:nth-child(1) {
   margin-top: 0;
 }
 
-.cli-commands table {
+.developer-module table {
   width: 100%;
-  display: block;
   overflow-x: scroll;
 }
 
-.cli-commands th {
-  border: solid 1px black;
+.developer-module th {
+  border: solid 1px var(--gray-600);
   padding: 4px 8px;
   background-color: var(--slate-600);
 }
 
-.cli-commands td {
-  border: solid 1px black;
+.developer-module td {
+  border: solid 1px var(--gray-600);
   padding: 4px 8px;
 }
 
-.cli-commands code {
+.developer-module th:nth-child(1) {
+  width: var(--value-96);
+  word-wrap: break-word;
+}
+
+
+.developer-module code {
   font-family: 'Courier New', Courier, monospace;
   color: var(--red-300);
   padding: 4px 8px;
@@ -730,17 +735,21 @@ input:-webkit-autofill:active {
   border: solid 1px var(--slate-950);
   background-color: var(--slate-900);
   font-weight: 600;
+  word-wrap: break-word;
+  display: inline-block;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
-.cli-commands p {
+.developer-module p {
   margin-top: 1rem;
 }
 
-.cli-commands a {
-  color: var(--sky-600);
+.developer-module a {
+  color: var(--sky-400);
 }
 
-.cli-commands a:hover {
-  color: var(--sky-700);
+.developer-module a:hover {
+  color: var(--sky-600);
   text-decoration: underline;
 }

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import DeveloperContainer from "../../../components/developer/developer-container";
 
 export const metadata: Metadata = {
-    title: "Development",
+    title: "Developer Tools",
 };
 
 export default function Page() {
@@ -12,7 +12,7 @@ export default function Page() {
         <div className="h-full px-4 md:px-0 mb-16 md:mb-40">
             <div className="container flex flex-wrap mx-auto pt-28 md:pt-36">
 
-                <h1>Development</h1>
+                <h1>Developer Tools</h1>
 
                 <div className="flex flex-col md:flex-row items-stretch w-full md:mt-6">
 

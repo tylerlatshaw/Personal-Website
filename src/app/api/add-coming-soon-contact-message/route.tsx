@@ -49,9 +49,9 @@ export async function POST(request: Request) {
                 from: `${fromAddress}`,
                 to: email,
                 bcc: `${myEmailAddress}`,
-                subject: "Thanks for reaching out!",
+                subject: "You're on the list! ✅",
                 text: "",
-                react: <ComingSoonOnList messageData={{ ...messageData, title: "I'll be in touch soon! ✉️" }} />,
+                react: <ComingSoonOnList messageData={{ ...messageData, title: "You're on the list!" }} />,
             }),
             resend.emails.send({
                 from: `${fromAddress}`,

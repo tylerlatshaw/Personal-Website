@@ -76,7 +76,6 @@ export default function FormFooterContact() {
 
     return (
         <form className="w-full mt-1 footer-contact-form" method="POST" onSubmit={handleSubmit(onSubmit)}>
-
             <div className="relative z-0 w-full mb-3 group">
                 <input {...register("name")} id="name" type="text" className={inputStyles} placeholder=" " required disabled={loadingState} />
                 <label htmlFor="name" className={inputLabelStyles}>Name</label>

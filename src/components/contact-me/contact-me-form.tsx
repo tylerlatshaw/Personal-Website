@@ -75,8 +75,6 @@ export default function FormContact() {
 
     return (
         <form className="contact-form w-full mt-1" method="POST" onSubmit={handleSubmit(onSubmit)}>
-        {/* <form className="contact-form w-full mt-1" method="POST"> */}
-
             <div className="relative z-0 w-full mt-2 mb-4 group">
                 <label htmlFor="name" className={inputLabelStyles}>Name</label>
                 <input {...register("name")} id="name" type="text" className={inputStyles} placeholder=" " required disabled={loadingState} />
