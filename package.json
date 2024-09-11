@@ -12,7 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@mui/icons-material": "5.15.3",
+    "@mui/icons-material": "^5.15.3",
     "@mui/lab": "^5.0.0-alpha.151",
     "@mui/material": "^5.14.9",
     "@notionhq/client": "^2.2.15",
@@ -27,23 +27,23 @@
     "hamburger-react": "^2.5.1",
     "isomorphic-dompurify": "^2.15.0",
     "marked": "^14.1.0",
-    "next": "14.2.6",
+    "next": "^14.2.9",
     "next-sitemap": "^4.2.3",
     "postcss": "^8.4.41",
-    "react": "^18",
+    "react": "^18.3.1",
     "react-card-flip": "^1.2.3",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",
     "react-select": "^5.8.0",
     "react-textarea-autosize": "^8.5.3",
     "resend": "^4.0.0",
-    "tailwindcss": "^3.4.10"
+    "tailwindcss": "^3.4.11"
   },
   "_moduleAliases": {
     "@modules": "build/modules",
     "@core": "build/core"
   },
   "devDependencies": {
-    "typescript": "^5.5.4"
+    "typescript": "^5.6.2"
   }
 }
