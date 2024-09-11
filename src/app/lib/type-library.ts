@@ -1,5 +1,6 @@
 import { SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
+import { TemplateOptions } from "../../components/developer/developer-emails";
 
 // import type { TemplateOptions } from "@/components/developer/email-send-form";
 
@@ -31,17 +32,17 @@ export type DeveloperItemType = {
 //     source: string
 // }
 
-// export type EmailFormType = {
-//     selection: TemplateOptions
-//     formName: string
-//     email: string
-//     apiKey: string
-//     title: string
-//     name: string
-//     message: string
-//     source: string
-//     referringPage: string
-// }
+export type EmailFormType = {
+    selection: TemplateOptions
+    formName: string
+    email: string
+    apiKey: string
+    title: string
+    name: string
+    message: string
+    source: string
+    referringPage: string
+}
 
 export type FooterSocialType = {
     display: string,

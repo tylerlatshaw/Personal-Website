@@ -75,8 +75,6 @@ export default function FormContact() {
 
     return (
         <form className="contact-form w-full mt-1" method="POST" onSubmit={handleSubmit(onSubmit)}>
-        {/* <form className="contact-form w-full mt-1" method="POST"> */}
-
             <div className="relative z-0 w-full mt-2 mb-4 group">
                 <label htmlFor="name" className={inputLabelStyles}>Name</label>
                 <input {...register("name")} id="name" type="text" className={inputStyles} placeholder=" " required disabled={loadingState} />
@@ -93,7 +91,7 @@ export default function FormContact() {
                 <span className={spanStyles}></span>
             </div>
             <div className="flex items-center">
-                <Button type="submit" className="button text-white bg-green-700 hover:bg-green-800 focus:ring-2 focus:outline-none focus:ring-green-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center" disabled={loadingState}>
+                <Button type="submit" className="button text-white bg-green-700 hover:bg-green-800 focus:ring-2 focus:outline-none focus:ring-green-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center" disabled={loadingState} sx={{"&.Mui-disabled": {color: "white"}}}>
                     <span className="flex items-center">
                         {loadingState ? <>Submit&nbsp;<CircularProgress size={16} sx={{ color: "white" }} /></> : <>Submit&nbsp;<SendIcon className="text-lg flex items-center" /></>}
                     </span>
