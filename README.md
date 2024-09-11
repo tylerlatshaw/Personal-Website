@@ -26,7 +26,7 @@
 #### Database:
 
 <a href="https://www.npmjs.com/package/@notionhq/client" style="text-decoration: none;" target="_blank">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FPersonal-Website%2Fraw%2Fmain%2Fpackage.json&query=%24.dependencies%5B%22%40notionhq%2Fclient%22%5D&logo=notion&label=Notion&color=darkgreen&style=for-the-badge" alt="Notion Badge">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FPersonal-Website%2Fraw%2Fmain%2Fpackage.json&query=%24.dependencies%5B%22%40notionhq%2Fclient%22%5D&logo=notion&logoColor=darkgreen&label=Notion&color=darkgreen&style=for-the-badge" alt="Notion Badge">
 </a>
 
 #### Interactivity: 
