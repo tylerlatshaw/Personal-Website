@@ -318,8 +318,7 @@ html {
 }
 
 body {
-  background-image: url('/images/header.png');
-  background-image: radial-gradient(75% 75% at 50% 50%, #073AFF00 0%, #000000FF 80%), radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%), radial-gradient(50% 50% at 7% 98%, #B53AFFF5 21%, #073AFF00 100%), radial-gradient(45% 45% at 35% 87%, #FFA65AFF 5%, #073AFF00 100%), radial-gradient(21% 37% at 72% 23%, #06E47794 24%, #073AFF00 100%), radial-gradient(35% 56% at 91% 74%, #4474FEF5 9%, #073AFF00 100%), radial-gradient(74% 86% at 67% 38%, #00AA4DF5 24%, #073AFF00 100%), linear-gradient(120deg, #029CFFFF 0%, #004CFCFF 100%);
+  background-image: radial-gradient(75% 75% at 50% 50%, #073AFF00 0%, #000000FF 80%), radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%), radial-gradient(50% 50% at 7% 98%, #8629bdf5 21%, #073AFF00 100%), radial-gradient(45% 45% at 35% 87%, #c87b39 5%, #073AFF00 100%), radial-gradient(21% 37% at 72% 23%, #12a75e94 24%, #073AFF00 100%), radial-gradient(35% 56% at 91% 74%, #4474FEF5 9%, #073AFF00 100%), radial-gradient(74% 86% at 67% 38%, #067237f5 24%, #073AFF00 100%), linear-gradient(120deg, #126da8 0%, #004CFCFF 100%);
 }
 
 @media (min-width: var(--screen-md)) {
