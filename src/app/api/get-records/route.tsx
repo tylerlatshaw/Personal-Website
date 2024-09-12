@@ -3,6 +3,8 @@ import { getRecords } from "../../../utilities/notion-client";
 
 import type { RecordResponseType, RecordResultType } from "../../lib/notion-type-library";
 
+export const revalidate = 60;
+
 export async function GET() {
     var start_cursor;
     var has_more = true;

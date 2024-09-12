@@ -4,7 +4,9 @@ import { RecordResultType } from "./../../app/lib/notion-type-library";
 export default function VinylRecordContainer() {
 
     async function getData() {
-        const res = await fetch(process.env.BASE_URL + "/api/get-records");
+        const res = await fetch(process.env.BASE_URL + "/api/get-records", {
+            next: { revalidate: 60 }
+        });
         const data = await res.json();
 
         return data;
