@@ -1,15 +1,19 @@
-import { portfolioOptions, portfolioOptionType } from "../../app/lib/portfolio-data";
+import { portfolioCategories, portfolioOptions, portfolioOptionType } from "../../app/lib/portfolio-data";
 import { companyData } from "../../app/lib/resume-data";
 import Image from "next/image";
 import Link from "next/link";
 import CreatedForSection from "./created-for-section";
+import { Button, SvgIcon, Tooltip } from "@mui/material";
 
 export default function PortfolioGallery() {
 
+    const categories: portfolioCategories[] = ["Reports", "Presentations", "Software Development"];
+
     function createPortfolioCard(portfolioItem: portfolioOptionType) {
 
-        const { portfolioSlug, name, isFeatured, associatedWith, previewLink } = portfolioItem;
+        const { portfolioSlug, name, isFeatured, associatedWith, previewLink, createdWith } = portfolioItem;
         const associatedOrganization = companyData.find((company) => company.company === associatedWith);
+
         var cardStyles = "flex w-full h-80 group hover:shadow-xl ";
         var infoSection = "flex flex-col justify-between px-4 py-3 md:px-6 md:py-5 bg-slate-900 ";
         var imageSection = "relative overflow-hidden ";
@@ -32,6 +36,22 @@ export default function PortfolioGallery() {
                             <span className={"leading-3 text-xl md:text-base xl:text-lg w-full font-semibold hover:text-green-500" + (!isFeatured ? " md:line-clamp-1 md:text-ellipsis" : null)}>{name}</span>
                         </div>
                         {
+                            createdWith ? <div className="flex flex-col">
+                                <span className="text-sm pb-1">Technology Used:</span>
+                                <div className="flex flex-row flex-wrap">
+                                    {
+                                        createdWith.map((icon) => {
+                                            return <div key={icon.name} className="p-1">
+                                                <Tooltip title={icon.name}>
+                                                    <SvgIcon>{icon.icon}</SvgIcon>
+                                                </Tooltip>
+                                            </div>;
+                                        })
+                                    }
+                                </div>
+                            </div> : null
+                        }
+                        {
                             associatedOrganization ? <CreatedForSection company={associatedOrganization.company} logo={associatedOrganization.logo} avatar={associatedOrganization.avatar} location={associatedOrganization.location} /> : null
                         }
                     </div>
@@ -47,17 +67,40 @@ export default function PortfolioGallery() {
     return (
         <>
             <div className="w-full">
-                <div className="grid grid-flow-row grid-cols-1 md:grid-cols-3 gap-6">
-                    {
-                        portfolioOptions.sort((a, b) => a.order - b.order).map((item) =>
-                            <div key={item.portfolioSlug} className={item.isFeatured ? "md:col-span-2" : "col-span-1"}>
+                <div className="flex flex-col md:flex-row w-full justify-center md:items-center mx-auto space-x-0 md:space-x-4 space-y-2 md:space-y-0 mt-4">
+                    <span className="text-white normal-case text-base font-semibold">Jump To:</span>
+                    <div className="flex flex-row space-x-2 md:space-x-4">
+                        {
+                            categories.map((category) => {
+                                return (<div key={category}>
+                                    <Button href={"#" + category} className="px-4 py-2 bg-blue-800 hover:bg-blue-900 shadow-md shadow-gray-800 text-white normal-case text-base font-semibold rounded">{category}</Button>
+                                </div>);
+                            })
+                        }
+                    </div>
+                </div>
+                {
+                    categories.map((category) => {
+                        const filteredOptions = portfolioOptions.filter((a) => {
+                            return a.category.includes(category);
+                        });
+
+                        return (<div key={category} className="pb-0 md:pb-8 last:pb-0">
+                            <h2 id={category} className="flex items-start w-full pt-16 md:pt-2">{category}</h2>
+                            <div className="grid grid-flow-row grid-cols-1 md:grid-cols-3 gap-6">
                                 {
-                                    createPortfolioCard(item)
+                                    filteredOptions.sort((a, b) => a.order - b.order).map((item) =>
+                                        <div key={item.portfolioSlug} className={item.isFeatured ? "md:col-span-2" : "col-span-1"}>
+                                            {
+                                                createPortfolioCard(item)
+                                            }
+                                        </div>
+                                    )
                                 }
                             </div>
-                        )
-                    }
-                </div>
+                        </div>);
+                    })
+                }
             </div>
         </>
     );

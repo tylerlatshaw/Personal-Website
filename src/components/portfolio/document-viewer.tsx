@@ -1,13 +1,13 @@
 import CreatedForSection from "./created-for-section";
 import { companyData } from "../../app/lib/resume-data";
-import { Button } from "@mui/material";
+import { Button, SvgIcon, Tooltip } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 import type { portfolioOptionType } from "../../app/lib/portfolio-data";
 
 export default function DocumentViewer(portfolio: portfolioOptionType) {
 
-    const { name, description, date, associatedWith, assetLink, webLink } = portfolio;
+    const { name, description, date, associatedWith, assetLink, webLink, createdWith } = portfolio;
     const associatedOrganization = companyData.find((company) => company.company === associatedWith);
 
     return (
@@ -32,6 +32,25 @@ export default function DocumentViewer(portfolio: portfolioOptionType) {
                                 <div className="grow">
                                     <span dangerouslySetInnerHTML={{ __html: description }} />
                                 </div>
+
+                                {
+                                    createdWith ? <div className="flex-none self-center mx-2">
+                                        <div className="flex flex-col">
+                                            <span className="text-sm pb-1">Technology Used:</span>
+                                            <div className="flex flex-row flex-wrap">
+                                                {
+                                                    createdWith.map((icon) => {
+                                                        return <div key={icon.name} className="p-1">
+                                                            <Tooltip title={icon.name}>
+                                                                <SvgIcon>{icon.icon}</SvgIcon>
+                                                            </Tooltip>
+                                                        </div>;
+                                                    })
+                                                }
+                                            </div>
+                                        </div>
+                                    </div> : null
+                                }
                                 {
                                     associatedWith ? <>
                                         <div className="flex-none self-center">
@@ -63,7 +82,7 @@ export default function DocumentViewer(portfolio: portfolioOptionType) {
 
                     <iframe src={assetLink!} className="w-full h-screen max-h-[850px]" />
                 </div>
-            </div>
+            </div >
         </>
     );
 }
