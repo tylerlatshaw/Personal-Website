@@ -7,9 +7,6 @@
 <a href="https://www.npmjs.com/package/next" style="text-decoration: none;" target="_blank">
     <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FPersonal-Website%2Fraw%2Fmain%2Fpackage.json&query=%24.dependencies.next&logo=npm&label=NextJS&color=red&style=for-the-badge" alt="Next Badge">
 </a>
-<a href="https://www.npmjs.com/package/react" style="text-decoration: none;" target="_blank">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FPersonal-Website%2Fraw%2Fmain%2Fpackage.json&query=%24.dependencies.react&logo=react&label=React&color=lightblue&style=for-the-badge" alt="React Badge">
-</a>
 <a href="https://www.npmjs.com/package/typescript" style="text-decoration: none;" target="_blank">
     <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FPersonal-Website%2Fraw%2Fmain%2Fpackage.json&query=%24.devDependencies.typescript&logo=typescript&logoColor=blue&label=TypeScript&color=blue&style=for-the-badge" alt="TypeScript Badge">
 </a>

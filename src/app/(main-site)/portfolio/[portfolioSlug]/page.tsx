@@ -20,7 +20,11 @@ export default function Page({ params }: { params: { portfolioSlug: string } }) 
                                 date={portfolioData?.date!}
                                 associatedWith={portfolioData?.associatedWith!}
                                 previewLink={portfolioData?.previewLink!}
-                                assetLink={portfolioData?.assetLink!} order={portfolioData?.order!} webLink={portfolioData?.webLink!}
+                                assetLink={portfolioData?.assetLink!} 
+                                order={portfolioData?.order!} 
+                                webLink={portfolioData?.webLink!}
+                                category={portfolioData?.category}
+                                createdWith={portfolioData?.createdWith}
                             />
                         </> :
                         <NotFound />
